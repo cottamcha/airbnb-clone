@@ -10,14 +10,14 @@ const InfoCard = ({ img, location, title, description, star, price, total }) => 
                 <Image className='rounded-2xl' src={img} layout='fill' objectFit='cover'/>
             </div>
             <div className='flex flex-col flex-grow pl-5'>
-                <div className='flex justify-between'>
+                <div className='hidden sm:inline-flex justify-between'>
                     <p>{location}</p>
                     <HeartIcon className='h-7 cursor-pointer'/>
                 </div>
                 <h4 className='text-xl'>{title}</h4>
                 <div className='border-b w-10 pt-2' />
-                <p className='pt-2 text-sm text-gray-500 flex-grow'>{description}</p>
-                <div className='flex justify-between items-end pt-5'>
+                <p className='hidden sm:inline-flex pt-2 text-sm text-gray-500 flex-grow'>{description}</p>
+                <div className='flex justify-between items-end sm:pt-5'>
                     <p className='flex items-center'>
                         <StarIcon className='h-7 cursor-pointer text-red-400'/>
                         {star}
