@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { SearchIcon, UsersIcon, UserCircleIcon, MenuIcon, GlobeAltIcon } from '@heroicons/react/solid'
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import { DateRangePicker } from 'react-date-range';
+import { DateRange } from 'react-date-range';
 import { useRouter } from 'next/dist/client/router';
 
 const Header = ({placeholder}) => {
@@ -63,7 +63,7 @@ const Header = ({placeholder}) => {
 
             {searchInput && (
                 <div className='flex flex-col col-span-3 mx-auto mt-3'>
-                    <DateRangePicker
+                    <DateRange
                         ranges={[selectionRange]} 
                         minDate={new Date()} 
                         rangeColors={['#FD5B61']}
